@@ -34,7 +34,13 @@ class ResultActivity : AppCompatActivity() {
 
         // Atur tampilan berdasarkan template yang dipilih
         binding.templateBackground.setImageResource(
-            if (template == "template1") R.drawable.template1 else R.drawable.template2
+            when (template) {
+                "template1" -> R.drawable.template1
+                "template2" -> R.drawable.template2
+                "template3" -> R.drawable.template3
+                "template4" -> R.drawable.template4
+                else -> R.drawable.template1 // Default jika tidak ada template
+            }
         )
 
         // Font yang akan digunakan
@@ -78,7 +84,6 @@ class ResultActivity : AppCompatActivity() {
             // Kembali ke TemplateSelectionActivity
             finish() // Mengakhiri ResultActivity dan kembali ke activity sebelumnya
         }
-
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

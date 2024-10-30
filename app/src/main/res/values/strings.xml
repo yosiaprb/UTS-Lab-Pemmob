@@ -1,3 +1,17 @@
 <resources>
+    <!--    Nama aplikasi-->
     <string name="app_name">Birthday Wish</string>
+
+    <!--    Activity input-->
+    <string name="app_title">Birthday Wish</string>
+    <string name="recipient_name">Nama Penerima</string>
+    <string name="recipient_age">Umur Penerima</string>
+    <string name="sender_name">Nama Pengirim</string>
+    <string name="button_next">Lanjut</string>
+
+    <!--    Activity template selection-->
+    <string name="template_selection_title">Pilih Template</string>
+
+    <!--    Activity result-->
+    <string name="button_back">Kembali</string>
 </resources>

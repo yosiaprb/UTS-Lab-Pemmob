@@ -1,45 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CBDCEB"
     tools:context=".TemplateSelectionActivity">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:text="Pilih Template"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/template1"
-        android:src="@drawable/template1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="Template 1"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/template2"
-        app:layout_constraintDimensionRatio="16:9"
-        android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="@string/template_selection_title"
+            android:textSize="40sp"
+            android:textColor="#133E87"
+            android:fontFamily="@font/coolvetica"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <ImageView
-        android:id="@+id/template2"
-        android:src="@drawable/template2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="Template 2"
-        app:layout_constraintTop_toBottomOf="@id/template1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="16:9"
-        android:layout_marginTop="16dp"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#F3F3E0">
+
+                <ImageView
+                    android:id="@+id/template1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Template 1"
+                    android:src="@drawable/template1" />
+
+                <ImageView
+                    android:id="@+id/template2"
+                    android:src="@drawable/template2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Template 2"/>
+
+                <ImageView
+                    android:id="@+id/template3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:contentDescription="Template 3"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/template3" />
+
+                <ImageView
+                    android:id="@+id/template4"
+                    android:src="@drawable/template4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Template 4"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

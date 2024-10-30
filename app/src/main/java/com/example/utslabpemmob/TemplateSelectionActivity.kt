@@ -33,6 +33,14 @@ class TemplateSelectionActivity : AppCompatActivity() {
             openResultActivity(recipientName, recipientAge, senderName, "template2")
         }
 
+        binding.template3.setOnClickListener {
+            openResultActivity(recipientName, recipientAge, senderName, "template3")
+        }
+
+        binding.template4.setOnClickListener {
+            openResultActivity(recipientName, recipientAge, senderName, "template4")
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
